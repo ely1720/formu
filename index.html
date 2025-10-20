@@ -126,7 +126,7 @@
   
 //--------------------------CONEXION CON API DE WHATSAPP---------------------------------------------------------------------
 <script>
-document.getElementById("pedidoForm").addEventListener("submit", function(e) {
+document.getElementById("pedidoForm").addEventListener("submit", function(e) { 
   e.preventDefault(); // Evita que el formulario se envíe de inmediato
 
   // Obtener los valores del formulario
@@ -134,7 +134,7 @@ document.getElementById("pedidoForm").addEventListener("submit", function(e) {
   const nombre = document.querySelector('input[name="nombre"]').value;
   const dia = document.querySelector('select[name="dia"]').value;
   const colonia = document.querySelector('select[name="colonia"]').value;
-  const total = document.querySelector('input[name="total"]').value;
+  const total = document.querySelector('input[name="total"]').value; 
 
   // Formato del mensaje para WhatsApp
   const mensaje = `*Nuevo pedido PANQUES* %0A
@@ -154,6 +154,7 @@ document.getElementById("pedidoForm").addEventListener("submit", function(e) {
   fetch(this.action, {   //"Envía todos los datos del formulario usando POST al archivo procesar_pedido.php”.
     method: this.method,
     body: new FormData(this)
+  
   }).then(() => {            // se ejecuta cuando la petición al servidor fue exitosa.
     // Abrir WhatsApp después de guardar
     window.open(url, "_blank"); //abre la url del api whatsapp en una nueva pestaña
