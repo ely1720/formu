@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tienda de abarrotes · Agregar producto</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      body {
+        background-image: url("MFondo.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 100vh;
+      }
+      .form-container {
+        background-color: #a27100a8;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+  .Btnes{
+    display: flex;
+  }
+  #cancela{
+    margin-left: 1rem;
+  }
+    .navbar {
+    background-color: #794901cf !important;
+    height: 70px; 
+    padding: 0 1rem; /* Espaciado horizontal */
+    display: flex;
+    align-items: center;
+  }
+
+  .img-logo img {
+    height: 60px; 
+    width: auto;
+  }
+
+  .img-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem; /*funciona igual dejando margen 1rem = 16px*/
+  }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="img-logo">
+        <img src="LOGOTIPO-PANQUES.png" alt="">
+    </div>
+    <a class="navbar-brand" href="#">Inicio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Panques y Mantecadas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pedidos</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!-- Formulario -->
+    <div class="container py-5">
+      <main>
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6 form-container">
+            <h4 class="mb-4 text-center">Hacer pedido</h4>
+            <form class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="firstName" class="form-label">Productos solicitados:</label>
+                <input type="text" class="form-control" id="firstName" required>
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="barcode" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="barcode" required>
+                <div class="invalid-feedback">Nombre de quien realiza el pedido</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="state" class="form-label">Dia</label>
+                <select class="form-select" id="state" required>
+                  <option value="">Elige</option>
+                  <option>Lunes</option>
+                  <option>Sabado</option>
+                </select>
+                <div class="invalid-feedback">Elige el dia de entrega para la entrega</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="state" class="form-label">Localidad de Progreso, Piaxtla, Puebla</label>
+                <select class="form-select" id="state" required>
+                  <option value="">Elige colonia</option>
+                  <option>Barrio Santa Cruz</option>
+                  <option>Barrio San Isidro</option>
+                  <option>Centro</option>
+                </select>
+                <div class="invalid-feedback">Elige una colonia para la entrega</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="price" class="form-label">
+                  Total
+                  <span data-bs-toggle="tooltip" title="Total del pedido"></span>
+                </label>
+                <input type="number" class="form-control" id="price" required>
+                <div class="invalid-feedback"></div>
+              </div>
+
+                <!-- Button trigger modal -->
+                <button type="button" id="cancela" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Enviar
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Envio del pedido</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Los datos proporcionados seran enviados al contacto personal de Mayte para la elaboracion de su pedido.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">cancelar</button>
+                        <button type="button" class="btn btn-success">Enviar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- Button trigger modal -->
+                <button type="button" id="cancela" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Cancelar Pedido
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cancelar pedido</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        El pedido sera cancelado.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">cancelar</button>
+                        <button type="button" class="btn btn-primary">Desacer</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="form-validation.js"></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+      const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+    </script>
+  </body>
+</html>

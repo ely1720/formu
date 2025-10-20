@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panques Mayte · Página principal</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      body {
+        padding-top: 0;
+        padding-bottom: 3rem;
+        color: #5a5a5a;
+        background-image: url('../img/fondo2.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .container, .container-fluid {
+        max-width: 100%;
+      }
+
+      .site-header {
+        background-color: #794901cf;
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+      }
+
+      .site-header a {
+        color: #f8f8f8;
+        transition: color .15s ease-in-out;
+        font-weight: 500;
+      }
+      .site-header a:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .hero-section {
+        background-image: url('../img/MFondo.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 60vh;
+      }
+
+      .hero-section h1 {
+        font-size: 3rem;
+        color: #fff;
+      }
+
+      .text {
+        font-size: 1.5rem;
+        text-align: center;
+        color: aliceblue;
+      }
+
+      .alert {
+        background-color: #794901;
+      }
+
+      .alert2 {
+        background-color: #fff1dd;
+      }
+
+      .text1 {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .py-2 {
+        margin-top: 1.5rem;
+        color: black;
+        font-size: 18px;
+      }
+
+      .marketing .col-lg-4 {
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .marketing .col-lg-4 p {
+        margin: 0 .75rem;
+      }
+
+      .featurette-divider {
+        margin: 5rem 0;
+      }
+
+      .featurette-heading {
+        font-size: 2.5rem;
+        letter-spacing: -.05rem;
+        color: #3e2a09;
+      }
+
+      .carousel-item {
+        height: 34rem;
+      }
+
+      .carousel-item img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+      .container-fluid2{
+        margin-top: 5rem;
+      }
+      #Tit{
+        color: #f8f8f8;
+        font-size: 5rem;
+      }
+      .lead{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2rem;
+      }
+      .img-fluid{
+        width: 58rem;
+        height: 30rem;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header class="site-header sticky-top py-1">
+      <nav class="container-fluid d-flex flex-column flex-md-row justify-content-between px-4">
+        <a class="py-3" href="#">
+          <img src="../img/LOGOTIPO-PANQUES.png" width="120" height="64" alt="Logo">
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Inicio</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Panques y Mantecadas</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Eventos</a>
+        <a class="py-2 d-none d-md-inline-block" href="../agregar_pedido.php">Pedidos</a>       
+      </nav>
+    </header>
+ 
+    <main>
+      <div class="hero-section d-flex align-items-center justify-content-center text-center text-white p-5">
+        <div>
+          <h1 class="fw-bold">Panques Mayte</h1>
+          <p class="lead fw-normal mb-4">Sabor artesanal en cada bocado. Hechos con amor y los mejores ingredientes.</p>
+          <a class="btn btn-outline-light btn-lg" href="#">Ver Panques</a>
+        </div>
+      </div>
+    </main>
+
+    <div class="alert alert-danger mt-4" role="alert">
+      <p class="text">Panques Mayte realiza entregas los días lunes y sábados.</p>
+      <p class="text">Si deseas agendar para otro día, especialmente para eventos, por favor indícalo en tu pedido.</p>
+    </div>
+
+      <!-- Carousel -->
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../img/panques.jpg" alt="">
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Panques Mayte</h1>
+                <p>Animate a probar cada uno de nuestros productos!.</p>
+                <p><a class="btn btn-lg btn-light" href="#">Ver mas</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../img/mantecadas.png" alt="">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Mantecadas</h1>
+                <p>Esponjosos y deliciosos panecillos de diferentes sabores.</p>
+                <p><a class="btn btn-lg btn-light" href="#">Hacer pedido</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+           <img src="../img/pan.jpg" alt="">
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>Panques.</h1>
+                <p>Panques Mayte ofrece distintos tipos de sabores. </p>
+                <p><a class="btn btn-lg btn-light" href="#">Hacer pedido</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+    <div class="container-fluid2 marketing px-5">
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="../img/marmol.jpg" class="bd-placeholder-img rounded-circle" width="180" height="180" alt="Panque Mármol">
+          <h2 class="fw-normal mt-3">Panqué de Mármol</h2>
+          <p>Combinación de vainilla con chocolate, suave y delicioso.</p><br>
+          <p><a class="btn btn-secondary" href="#">Pedir &raquo;</a></p>
+        </div>
+
+        <div class="col-lg-4">
+          <img src="../img/Coco.jpg" class="bd-placeholder-img rounded-circle" width="180" height="180" alt="Panque de Coco">
+          <h2 class="fw-normal mt-3">Panqué de Coco</h2>
+          <p>Pan dulce elaborado con rayadura natural de coco.</p><br>
+          <p><a class="btn btn-secondary" href="#">Pedir &raquo;</a></p>
+        </div>
+
+        <div class="col-lg-4">
+          <img src="../img/naranja.jpg" class="bd-placeholder-img rounded-circle" width="180" height="180" alt="Pan de Naranja">
+          <h2 class="fw-normal mt-3">Pan de Naranja</h2>
+          <p>Pan dulce con toque cítrico, suave y aromático.</p><br>
+          <p><a class="btn btn-secondary" href="#">Pedir &raquo;</a></p>
+        </div>
+      </div>
+
+      <div class="alert2 alert-light mt-5" role="alert">
+        <p class="text1">¡Los más pedidos!</p>
+        <p class="text1">Anímate a probar nuestros productos favoritos.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette align-items-center">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1" id="Tit">Panqué de Naranja</h2>
+          <p class="lead">Hecho con ralladura natural de naranja para un sabor fresco y aromático.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="../img/pannaranja-removebg-preview.png" alt="" class="img-fluid">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="row featurette align-items-center mt-5">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1" id="Tit">Panqué de Coco</h2>
+          <p class="lead">Suavidad irresistible con el sabor tropical del coco rallado.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="../img/pancoco-removebg-preview.png" alt="" class="img-fluid">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

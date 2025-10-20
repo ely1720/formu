@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  
+<style>
+  body {
+    background-color: #ffd699;
+  }
+  .navbar {
+    background-color: #794901cf !important;
+    height: 70px; 
+    padding: 0 1rem; /* Espaciado horizontal */
+    display: flex;
+    align-items: center;
+  }
+
+  .img-logo img {
+    height: 60px; 
+    width: auto;
+  }
+
+  .img-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem; /*funciona igual dejando margen 1rem = 16px*/
+  }
+  .cont1{
+    background-image: url("MFondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+  }
+  .text{
+    font-size: 1.5rem;
+    text-align: center;
+    color: aliceblue;
+  }
+  .alert{
+    background-color: #794901;
+  }
+  .card{
+    background-color: #794901d7;
+    margin-top: 5rem;
+    margin-left: 2.5rem;
+  }
+  .btn{
+    background-color: #ffbd4c;
+    color: rgb(0, 0, 0);
+    border-color:#ffbd4c ;
+  }
+  .btn:hover{
+    background-color: #794901;
+    color: white;
+    border-color:#ffbd4c ;
+  }
+  .card-title, .card-text{
+    color: white;
+  }
+  .cont2{
+    background-image: url("fondo2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+  }
+  #imagen1{
+    width: 990px; height: 630px;
+    margin-left: 17rem; margin-top: 1.5rem;
+  }
+  .cont3, .cont4{
+    background-image: url("panque+pedidos.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+  }
+  .dentro{
+    width: 96%; height: 780px;
+    margin-left: 2rem; display: flex;
+  }
+  .e1{
+    width: 400px; height: 460px; 
+    margin-top: 9rem; 
+  }
+  .e2{
+     width: 400px; height: 450px;
+    margin-top: 15rem; margin-left: 8rem; 
+  }
+  .e3{
+    width: 400px; height: 460px;
+    margin-top: 15rem; margin-left: 5rem; 
+  }
+  .imga {
+    width: 380px;
+    height: 270px;
+    margin-left: 0.6rem;
+    margin-top: 1rem;
+    background-image: url("pannaranja-removebg-preview.png");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .imga2 {
+    width: 480px;
+    height: 270px;
+    margin-left: 0.6rem;
+    margin-top: 1rem;
+    background-image: url("pancoco-removebg-preview.png");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .escrito{
+    margin-left: 6rem;
+  }
+  h3{
+    text-align: center; color: white; font-size: 3rem;
+  }
+  h2{
+    text-align: center; font-size: 4rem;
+  }
+  h1{
+    text-align: center; font-size: 6rem; color: white;
+  }
+  p{ text-align: center; font-size: 1.5rem;}
+  #dis{font-size: 2rem; color: white;}
+  .cont-btn2 {
+    background:#b03019;
+    color:white; border:none;
+    padding:12px 25px; border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:transform .3s ease, box-shadow .3s ease;
+    width: 230px; margin-left: 205px; margin-top: 10px;  height: 75px;
+  }
+  .cont-btn:hover, .cont-btn2:hover {
+    transform:translateY(-2px);
+    box-shadow:0 8px 25px rgba(255, 255, 255, 0.3);
+  }
+  .cont-btn{
+    background:#b03019;
+    color:white; border:none;
+    padding:12px 25px; border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:transform .3s ease, box-shadow .3s ease;
+    width: 230px; margin-left: 85px; margin-top: 10px;  height: 75px;
+  }
+  #btn{font-size: 1.5rem;}
+  .contenedorman{ display: flex;}
+  .e4{
+    margin-top: 15rem;
+    width: 40rem;
+    height: 30rem ;
+    margin-left: 5rem;
+  }
+  .e5{
+    margin-top: 10rem;
+    width: 40rem;
+    height: 30rem ;
+    margin-left: 5rem;
+  }
+  .imgmante {
+    width: 680px;
+    height: 470px;
+    margin-left: 0.6rem;
+    margin-top: 1rem;
+    background-image: url("mantecadas.png");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  /* ======== 🔹 MEDIA QUERIES PARA RESPONSIVE ======== */
+
+/* ✅ Para tablets (pantallas medianas: hasta 992px) */
+@media (max-width: 992px) {
+  #imagen1 {
+    width: 90%;
+    margin: 1rem auto;
+    height: auto;
+  }
+
+  .dentro, .contenedorman {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    margin-left: 0;
+  }
+
+  .e1, .e2, .e3, .e4, .e5 {
+    margin: 2rem auto;
+    text-align: center;
+  }
+
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.5rem; }
+  h3 { font-size: 2rem; }
+  p, #dis { font-size: 1.2rem; }
+
+  .imgmante, .imga, .imga2 {
+    width: 90%;
+    height: auto;
+  }
+
+  .cont-btn, .cont-btn2 {
+    margin: 1rem auto;
+    display: block;
+  }
+}
+
+/* ✅ Para celulares grandes (hasta 768px) */
+@media (max-width: 768px) {
+  .navbar-brand, .nav-link {
+    font-size: 1rem;
+  }
+
+  .card {
+    width: 90% !important;
+    margin: 1rem auto;
+  }
+
+  #imagen1 {
+    width: 95%;
+    margin: 1rem auto;
+  }
+
+  .carousel-inner img {
+    max-height: 400px;
+  }
+
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.8rem; }
+  p, #dis { font-size: 1rem; }
+
+  .cont-btn, .cont-btn2 {
+    width: 180px;
+    height: 55px;
+    font-size: 1rem;
+  }
+}
+
+/* ✅ Para celulares pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .img-logo img {
+    height: 45px;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.3rem; }
+  p, #dis { font-size: 0.9rem; }
+
+  .imga, .imga2, .imgmante {
+    width: 100%;
+    height: 180px;
+  }
+
+  .cont-btn, .cont-btn2 {
+    width: 160px;
+    height: 50px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="img-logo">
+        <img src="LOGOTIPO-PANQUES.png" alt="">
+    </div>
+    <a class="navbar-brand" href="#">Inicio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Panques y Mantecadas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="hacerp()">Pedidos</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="cont1">
+  <div class="cuadro">
+    <img src="nom-cuadro.png" alt="" id="imagen1">
+  </div>
+</div>
+
+<!--Alerta-->
+<div class="alert alert-danger" role="alert">
+  <p class="text">Panques Mayte realiza entregas los días lunes y sábados.</p>
+  <p class="text">Si deseas agendar para otro día, especialmente para eventos, 
+  por favor indícalo en tu pedido.</p>
+</div>
+
+<div class="cont2">
+  <!--Carrusel-->
+  <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="carousel-item active"> 
+        <img src="panques.jpg" class="d-block w-100" alt="..." style="height: 35rem; width: 35xrem;">
+      </div>
+      <div class="carousel-item"> 
+        <img src="panman.jpg" class="d-block w-100" alt="..." style="height: 35rem; width: 35rem;">
+      </div>
+      <div class="carousel-item">
+        <img src="pan.jpg" class="d-block w-100" alt="..." style="height: 35rem; width: 35rem;">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!--Cards-->
+  <div class="d-flex flex-wrap justify-content-center gap-3 p-3">
+    <!-- Card 1 -->
+  <div class="custom-card">
+    <div class="card" style="width: 18rem;">
+      <!-- contenido -->
+        <img src="naranja.jpg" class="card-img-top" alt="..." style="height: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Panque de Naranja</h5>
+        <p class="card-text">Pan dulce hecho con rayadura de naranja natural.</p>
+        <p class="card-text">Para pedidos al 5638840877.</p>
+      <!--Boton tooltip--> 
+          <button type="button" class="btn btn-outline-info"
+                  data-bs-toggle="tooltip" data-bs-placement="top"
+                  data-bs-custom-class="custom-tooltip"
+                  data-bs-title="Puedes obtener mas informacion acerca de nuestros productos!">
+            Ver mas... 
+          </button>
+      <!--Boton-->
+    </div>
+    </div>
+  </div>
+
+    <!-- Card 2 -->
+  <div class="custom-card">
+    <div class="card" style="width: 18rem;">
+      <!-- contenido -->
+      <img src="marmol.jpg" class="card-img-top" alt="..." style="height: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Panque de Marmol</h5>
+        <p class="card-text">Pan dulce combinado, sabor vainilla con chocolate.</p>
+        <p class="card-text">Para pedidos al 5638840877.</p>
+      <!--Boton tooltip--> 
+          <button type="button" class="btn btn-outline-info"
+                  data-bs-toggle="tooltip" data-bs-placement="top"
+                  data-bs-custom-class="custom-tooltip"
+                  data-bs-title="Puedes obtener mas informacion acerca de nuestros productos!">
+            Ver mas... 
+          </button>
+      <!--Boton-->
+    </div>
+    </div>
+  </div>
+
+    <!-- Card 3 -->
+  <div class="custom-card">
+    <div class="card" style="width: 18rem;">
+      <!-- contenido -->
+        <img src="Coco.jpg" class="card-img-top" alt="..." style="height: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Panque de Coco</h5>
+        <p class="card-text">Pan dulce hecho con rayadura de coco.</p>
+        <p class="card-text">Para pedidos al 5638840877.</p>
+      <!--Boton tooltip--> 
+          <button type="button" class="btn btn-outline-info"
+                  data-bs-toggle="tooltip" data-bs-placement="top"
+                  data-bs-custom-class="custom-tooltip"
+                  data-bs-title="Puedes obtener mas informacion acerca de nuestros productos!">
+            Ver mas... 
+          </button>
+      <!--Boton-->
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="cont3">
+  <div class="dentro">
+    <div class="e1">
+      <div class="imga"></div>
+      <h3>Paque de</h3>
+      <h2>NARANJA</h2>
+    </div>
+    <div class="e2">
+      <h1>PANQUES</h1>
+      <p>Los más pedidos!</p>
+      <p id="dis">Disfruta de su delicioso</p>
+      <p id="dis">sabor casero.</p>
+      <button class="cont-btn"><strong id="btn">Hacer pedido</strong></button>
+    </div>
+    <div class="e3">
+      <div class="imga2"></div>
+      <div class="escrito"><h3>Paque de</h3>
+      <h2>COCO</h2></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="cont3">
+  <div class="contenedorman">
+    <div class="e4">  
+      <h1>MANTECADAS</h1>
+      <p id="dis">Disfruta de cada uno</p>
+      <p id="dis">de los sabores.</p>
+      <button class="cont-btn2"><strong id="btn">Hacer pedido</strong></button>
+    </div>
+    <div class="e5">  
+      <div class="imgmante"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+      function hacerp(){
+        window.location.href = "formulario.html";
+      }
+</script>
+</body>
+</html>

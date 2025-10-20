@@ -1,0 +1,10 @@
+.container {
+  max-width: 960px;
+  margin-left: 50rem;
+}
+.carousel-item{
+  height: 30rem;
+}
+.mb-3{
+  text-align: center;
+}
